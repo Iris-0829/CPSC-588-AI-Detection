@@ -31,10 +31,11 @@ as the first line of the `downsample_data` function under the `Dataset` tab of t
 This step is not necessary since we've tested that our model is robust with different data samples
 
 ### Experiments: Baseline Model
-Then, to run the baseline experiments, simply run
+Then, to run the baseline experiments, simply run the notebook
 `CPSC_588_Statistical_AI_Detection_Baseline.ipynb`
 anywhere in the drive
 
+#### Change Dataset:
 If you wish to run the experiment on different datasets, please change this line in the second cell under the Model Training block
 ```
 dataset = "Wiki" # "PMQA"
@@ -42,7 +43,45 @@ dataset = "Wiki" # "PMQA"
 To the corresponding dataset
 
 ### Experiments: Model with Statistical Embeddings Only
-To run the Statistical Embedding Experiments:
+To run the Statistical Embedding Experiments, simply run the notebook
+`CPSC_588_Statistical_AI_Detection_StatEmbs.ipynb`
+anywhere in the drive
+
+Changing dataset is the same as above
+
+If you need to change the type of Statistical Embeddings or the fusion type, a few things needs to be changed:
+#### Change Statistical Embedding Type
+All changes happen in the second cell under the Model Training block (the same cell where you change datasets)
+
+There are two variables that you need to change:
+```
+stat_emb_dim =
+stat_fn =
+```
+1. Use PoS Tag Distribution Embedding Only:
+```
+stat_emb_dim = 36
+stat_fn = calculate_statistical_features_pos
+```
+2. Use Readability Metrics Embedding Only
+```
+stat_emb_dim = 8
+stat_fn = calculate_statistical_features_readability
+```
+3. Use both Embeddings at the Same Time
+```
+stat_emb_dim = 44
+stat_fn = calculate_statistical_features
+```
+
+#### Change Fusion Type
+In the same cell, simply set
+```
+fusion_type = "early"
+or
+fusion_type = "late"
+```
+accordingly
 
 ## Dataset
 
