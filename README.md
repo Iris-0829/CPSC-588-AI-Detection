@@ -25,6 +25,18 @@ as the first line of the `downsample_data` function under the `Dataset` tab of t
 
 This step is not necessary since we've tested that our model is robust with different data samples
 
+Then, to run the baseline experiments, simply run
+`CPSC_588_Statistical_AI_Detection_Baseline.ipynb`
+anywhere in the drive
+
+If you wish to run the experiment on different datasets, please change this line in the second cell under the Model Training block
+```
+dataset = "Wiki" # "PMQA"
+```
+To the corresponding dataset
+
+To run the Statistical Embedding Experiments:
+
 ## Dataset
 
 ### Wiki Intro
