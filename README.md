@@ -83,6 +83,13 @@ fusion_type = "late"
 ```
 accordingly
 
+### Experiments: Model with Everything
+To run the Experiments with Model that has all modules (i.e. including the Attacker), simply run the notebook
+`CPSC_588_Statistical_AI_Detection_Combined.ipynb`
+anywhere in the drive
+
+Changing any experiment settings is the same as above (Change Dataset; Change Statistical Embedding Type; Change Fusion Type)
+
 ## Dataset
 
 ### Wiki Intro
