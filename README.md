@@ -3,6 +3,7 @@
 ## Instruction for Running the Experiments
 ### Computing Infrastructure
 The experiments should be run on Google Colab, using V100 GPU
+
 All dependencies should already be satisfied or installed by simply running the notebooks
 
 ### Upload Datasets to Drive
