@@ -12,10 +12,18 @@ Then, upload them to Google Drive, at the specific path:
 /content/gdrive/MyDrive/CPSC_588_dataset/
 ```
 (i.e. upload `ori_pqaa.json` and `ori_pqal.json` into a folder named `CPSC_588_dataset`, please make sure this is correctly performed!)
+
 For the Wiki Intro dataset, the downloading code is already included in the notebooks so you don't have to worry about it
 
-Some settings before running the notebooks:
-First, for each notebook, replace the `openai.api_key` with your api key
+Some more settings before running the notebooks:
+1. First, for each notebook, replace the `openai.api_key` with your api key
+2. If you wish, you could add a line:
+```
+random.seed(0)
+```
+as the first line of the `downsample_data` function under the `Dataset` tab of the code.
+
+This step is not necessary since we've tested that our model is robust with different data samples
 
 ## Dataset
 
