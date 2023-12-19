@@ -19,10 +19,8 @@ Then, upload them to Google Drive, at the specific path:
 
 For the Wiki Intro dataset, the downloading code is already included in the notebooks so you don't have to worry about it
 
-### Miscellaneous / Random Settings
-Some more settings before running the notebooks:
-1. First, for each notebook, replace the current `openai.api_key` with your api key
-2. If you wish, you could add a line:
+### Random Settings
+If you wish, you could add a line:
 ```
 random.seed(0)
 ```
@@ -84,9 +82,13 @@ fusion_type = "late"
 accordingly
 
 ### Experiments: Model with Everything
-To run the Experiments with Model that has all modules (i.e. including the Attacker), simply run the notebook
+Before running the notebook (which has all modules i.e. including the Attacker)
 `CPSC_588_Statistical_AI_Detection_Combined.ipynb`
-anywhere in the drive
+Please first put your Open AI API Key at the end of this line
+```
+%env OPENAI_API_KEY {put your API key here}
+```
+Which is in the the 4th cell of the first block (Setup: Install and import)
 
 Changing any experiment settings is the same as above (Change Dataset; Change Statistical Embedding Type; Change Fusion Type)
 
